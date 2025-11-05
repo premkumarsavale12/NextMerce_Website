@@ -5,7 +5,7 @@ import img2 from "../../public/b-3.webp";
 import img3 from "../../public/b-4.webp";
 import img4 from "../../public/b-5.webp";
 import img5 from "../../public/b-6.webp";
-import "./Browser_Category.css"; // Import CSS file
+import "./Browser_Category.css";
 
 const Browser_Catrgory = () => {
     return (
@@ -14,32 +14,44 @@ const Browser_Catrgory = () => {
 
             <div className="category-list">
                 <div className="img-con">
-                    <Image src={img} alt="Laptop & PC" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img} alt="Laptop & PC" width={80} height={50} />
+                    </div>
                     <p>Laptop & PC</p>
                 </div>
 
                 <div className="img-con">
-                    <Image src={img1} alt="Watches" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img1} alt="Watches" width={80} height={50} />
+                    </div>
                     <p>Watches</p>
                 </div>
 
                 <div className="img-con">
-                    <Image src={img2} alt="Mobiles & Tablet" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img2} alt="Mobiles & Tablet" width={80} height={50} />
+                    </div>
                     <p>Mobiles & Tablet</p>
                 </div>
 
                 <div className="img-con">
-                    <Image src={img3} alt="Health & Sport" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img3} alt="Health & Sport" width={80} height={50} />
+                    </div>
                     <p>Health & Sport</p>
                 </div>
 
                 <div className="img-con">
-                    <Image src={img4} alt="Home Appliances" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img4} alt="Home Appliances" width={80} height={50} />
+                    </div>
                     <p>Home Appliances</p>
                 </div>
 
                 <div className="img-con">
-                    <Image src={img5} alt="Games & Video" width={82} height={62} />
+                    <div className="icon-wrapper">
+                        <Image src={img5} alt="Games & Video" width={80} height={50} />
+                    </div>
                     <p>Games & Video</p>
                 </div>
             </div>
