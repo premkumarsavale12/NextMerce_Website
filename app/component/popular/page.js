@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-// import "../shop/shop.css"
+
 import "../popular/popular.css"
 
 export default function Popular() {
@@ -11,7 +11,7 @@ export default function Popular() {
 
 
 
-    // Fetch API Data
+
     useEffect(() => {
         const getData = async () => {
             const response = await fetch("http://localhost:3001/products");
@@ -22,7 +22,7 @@ export default function Popular() {
         getData();
     }, []);
 
-    // Handle checkbox filter
+
     const handleFilterChange = (type, value) => {
         setFilters((prev) => {
             const isChecked = prev[type].includes(value);
@@ -33,7 +33,7 @@ export default function Popular() {
         });
     };
 
-    // Handle price filter
+
     const handlePriceChange = (e) => {
         const value = Number(e.target.value);
         setFilters((prev) => ({ ...prev, price: [0, value] }));
@@ -62,10 +62,10 @@ export default function Popular() {
     return (
         <div className="shop-page">
             {/* Sidebar */}
-           
+
             {/* Product Grid */}
             <div className="shop-container">
-                <h2 className="shop-title">Explore All Products</h2>
+                <h2 className="shop-title">Our Best Products</h2>
                 <div className="product-grid">
                     {currentProducts.map((item) => (
                         <div className="product-card" key={item.id}>

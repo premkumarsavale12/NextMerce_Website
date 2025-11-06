@@ -6,9 +6,7 @@ export default function NavbarMenu() {
   return (
     <div className="navbarMenu">
       <div className="menuLinks">
-        {/* <a href="#" className="menuItem active">Popular</a>
-        <a href="#" className="menuItem">Shop</a>
-        <a href="#" className="menuItem">Contact</a> */}
+
 
         <Link href={"/component/popular"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Popular </Link>
         <Link href={"/component/shop"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Shop </Link>
@@ -17,6 +15,13 @@ export default function NavbarMenu() {
         <div className="menuDropdown">
           <a href="#" className="menuItem">
             Pages <RiArrowDropDownLine className="dropdownIcon" />
+            <div className="dropdownContent">
+
+              <a href="#">abcd</a>
+              <a href="#">ab</a>
+              <a href="#">bv</a>
+              <a href="#">er</a>
+            </div>
           </a>
         </div>
 
