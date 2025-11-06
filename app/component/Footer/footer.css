@@ -1,16 +1,20 @@
-
 .footer {
   background-color: #f5f5f5;
   color: #333;
   padding: 40px 20px;
   font-family: 'Segoe UI', sans-serif;
+
+  /* Center & limit width */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 /* Grid Layout */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
+  gap: 30px;
   margin-bottom: 30px;
 }
 
@@ -90,4 +94,19 @@
 
 .footer-bottom .payments img {
   height: 20px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-grid {
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
 }

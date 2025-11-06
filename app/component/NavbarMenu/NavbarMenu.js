@@ -3,6 +3,7 @@ import "./NavbarMenu.css"
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Link from "next/link";
 export default function NavbarMenu() {
+  
   return (
     <div className="navbarMenu">
       <div className="menuLinks">
@@ -15,13 +16,7 @@ export default function NavbarMenu() {
         <div className="menuDropdown">
           <a href="#" className="menuItem">
             Pages <RiArrowDropDownLine className="dropdownIcon" />
-            <div className="dropdownContent">
 
-              <a href="#">abcd</a>
-              <a href="#">ab</a>
-              <a href="#">bv</a>
-              <a href="#">er</a>
-            </div>
           </a>
         </div>
 
