@@ -11,7 +11,8 @@ import Seller from "./component/seller/page"
 import Enhance from "./component/Enhance/page"
 import FeedBack from "./component/feedback/page"
 import Footer from "./component/Footer/page"
- import Offer from "./component/Offers/page"
+import SybscribeBanner from "./component/subscribeBanner/page"
+  
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       {/* <Enhance /> */} 
 
       <FeedBack /> 
+      <SybscribeBanner />
       
       {/* <Footer /> */}
       {/* <Offer /> */}
