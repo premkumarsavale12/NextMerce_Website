@@ -10,8 +10,8 @@ export default function NavbarMenu() {
         <a href="#" className="menuItem">Shop</a>
         <a href="#" className="menuItem">Contact</a> */}
 
-        <Link href={""} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Popular </Link>
-        <Link href={""} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Shop </Link>
+        <Link href={"/component/popular"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Popular </Link>
+        <Link href={"/component/shop"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Shop </Link>
         <Link href={"/component/contact"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Contact </Link>
 
         <div className="menuDropdown">
