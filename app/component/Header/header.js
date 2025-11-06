@@ -1,5 +1,6 @@
 "use client";
 import "./header.css";
+
 import Logo from "../../../public/logo1.svg";
 import { FaSearch } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
@@ -7,8 +8,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import LoginModel from "../LoginModel";
-import "../../component/LoginModel.css";
+ import LoginModel from "../LoginModal/LoginModel"
+
+import "../LoginModal/LoginModel.css"
 
 import Image from "next/image";
 import { useState } from "react";

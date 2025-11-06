@@ -69,8 +69,8 @@
   transition: border-color 0.2s ease;
 }
 .categoryText {
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 100;
+  font-size: 10px;
   color: #1e1e2d;
 }
 

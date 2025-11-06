@@ -1,14 +1,18 @@
 import React from "react";
 import "./NavbarMenu.css"
 import { RiArrowDropDownLine } from "react-icons/ri";
-
+import Link from "next/link";
 export default function NavbarMenu() {
   return (
     <div className="navbarMenu">
       <div className="menuLinks">
-        <a href="#" className="menuItem active">Popular</a>
+        {/* <a href="#" className="menuItem active">Popular</a>
         <a href="#" className="menuItem">Shop</a>
-        <a href="#" className="menuItem">Contact</a>
+        <a href="#" className="menuItem">Contact</a> */}
+
+        <Link href={""} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Popular </Link>
+        <Link href={""} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Shop </Link>
+        <Link href={"/component/contact"} className="menuItem-active" style={{ color: "black", textDecoration: "none" }}>  Contact </Link>
 
         <div className="menuDropdown">
           <a href="#" className="menuItem">

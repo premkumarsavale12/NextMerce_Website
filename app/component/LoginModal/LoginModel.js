@@ -1,11 +1,11 @@
 import React from "react";
-// import "./LoginModal.css"; 
-import "../component/LoginModel.css"
+
+import "../LoginModal/LoginModel.css"
 
 
 const LoginModal = ({ onClose }) => {
 
-  
+
   return (
     <div className="modalOverlay">
       <div className="modalContent">
@@ -24,8 +24,8 @@ const LoginModal = ({ onClose }) => {
 
         <div className="extraOptions">
           <a href="#">Forgot your password?</a>  <p className="signupPrompt">
-          Don't have an account? <a href="#">Sign Up Now!</a>
-        </p>
+            Don't have an account? <a href="#">Sign Up Now!</a>
+          </p>
           <div className="divider">Or</div>
           <button className="googleBtn">Sign In with Google</button>
           <button className="githubBtn">Sign In with Github</button>

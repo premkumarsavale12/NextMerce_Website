@@ -60,8 +60,21 @@
     font-weight: bold;
     margin-bottom: 30px;
     color: #222;
+     margin-left: 200px;
 }
 
+.hover-text {
+  color: black; 
+  display: inline-block;
+  padding-bottom: 3px; 
+  border-bottom: 2px solid transparent; /* invisible border initially */
+  transition: all 0.3s ease;
+}
+
+.hover-text:hover {
+  color: blue; /* text color on hover */
+  border-bottom: 2px solid blue; /* bottom border on hover */
+}
 /* Grid layout */
 .category-list {
     display: flex;

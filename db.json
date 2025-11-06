@@ -1,0 +1,82 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "grinder",
+            "price": 2999,
+            "image": "Images/grinder.webp"
+        },
+        {
+            "id": 2,
+            "name": "treadmil",
+            "price": 2999,
+            "image": "Images/treadmil.webp"
+        },
+        {
+            "id": 3,
+            "name": "Smart Tv",
+            "price": 2999,
+            "image": "Images/tv.webp"
+        },
+        {
+            "id": 4,
+            "name": "iPhone",
+            "price": 2999,
+            "image": "Images/iphone.webp"
+        },
+        {
+            "id": 5,
+            "name": "Apple",
+            "price": 2999,
+            "image": "Images/apple.webp"
+        },
+        {
+            "id": 6,
+            "name": "Smart Watch",
+            "price": 2999,
+            "image": "Images/watch.webp"
+        },
+        {
+            "id": 7,
+            "name": "Mac Book",
+            "price": 2999,
+            "image": "Images/macbook.webp"
+        },
+        {
+            "id": 8,
+            "name": "apple_imac",
+            "price": 2999,
+            "image": "Images/apple_imac.webp"
+        },
+        {
+            "id": 9,
+            "name": "apple_pc",
+            "price": 2999,
+            "image": "Images/apple_pc.webp"
+        },
+        {
+            "id": 10,
+            "name": "apple web",
+            "price": 2999,
+            "image": "Images/apple.webp"
+        },
+        {
+            "id": 11,
+            "name": "iphone 16 pro",
+            "price": 2999,
+            "image": "Images/iphone_16_pro.webp"
+        },
+        {
+            "id": 12,
+            "name": "Mac Book ",
+            "price": 2999,
+            "image": "Images/mac_book_14.webp"
+        },
+        {
+            "id": 13,
+            "name": "Range Tv ",
+            "price": 2999,
+            "image": "Images/range_43.webp"
+        }
+    ]
+}

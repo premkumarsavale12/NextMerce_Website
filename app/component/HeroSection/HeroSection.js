@@ -1,11 +1,21 @@
 "use client";
-import Image from "next/image";
-import img from "../../public/sl-1.webp"
-import img1 from "../../public/sl-2.webp"
-import img2 from "../../public/sl-3.webp"
 
-import first from "../../public/r-1.webp"
-import second from "../../public/r-2.webp"
+import Image from "next/image";
+ 
+// import img from "../../public/sl-1.webp"
+// import img1 from "../../public/sl-2.webp"
+// import img2 from "../../public/sl-3.webp"
+// import first from "../../public/r-1.webp"
+// import second from "../../public/r-2.webp"
+
+ 
+import img from "../../../public/sl-1.webp"
+import img1 from "../../../public/sl-2.webp"
+import img2 from "../../../public/sl-3.webp"
+
+import first from "../../../public/r-1.webp"
+import second from "../../../public/r-2.webp"
+
 import "./HeroSection.css";
 import { useEffect, useState } from "react";
 
