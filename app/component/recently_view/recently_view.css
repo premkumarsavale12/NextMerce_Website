@@ -1,0 +1,80 @@
+
+.recently-container {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.recently-title {
+  font-size: 1.8rem;
+text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+   margin-left: 80px;
+}
+
+.recently-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swap-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swap-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.swap-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.recently-list {
+  display: flex;
+  overflow: hidden;
+  gap: 15px;
+  width: 85%;
+  justify-content: center;
+}
+
+.recently-card {
+  flex: 0 0 calc(20% - 15px);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.recently-card:hover {
+  transform: translateY(-5px);
+}
+
+.recently-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recently-name {
+  font-size: 1rem;
+  margin: 8px 0 4px;
+  color: #333;
+}
+
+.recently-price {
+  font-size: 0.9rem;
+  color: #555;
+}

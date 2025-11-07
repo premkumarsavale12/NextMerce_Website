@@ -1,7 +1,8 @@
 "use client"
 import { useEffect, useState } from "react"
 import "../popular/popular.css"
- import ProductDetails from "../productDetails/page"
+import ProductDetails from "../productDetails/page"
+import Recently_View from "../recently_view/page"
 
 export default function Popular() {
     const [products, setProducts] = useState([]);
@@ -69,14 +70,25 @@ export default function Popular() {
                             <button onClick={handleNext} disabled={currentPage === totalPages}>
                                 Next ▶
                             </button>
+
                         </div>
+
                     </>
                 ) : (
-                    <ProductDetails
-                        product={selectedProduct}
-                        onBack={() => setSelectedProduct(null)}
-                        
-                    />
+
+                    <div>
+
+                        <ProductDetails
+                            product={selectedProduct}
+                            onBack={() => setSelectedProduct(null)}
+                        />
+
+                        <Recently_View />
+
+                    </div>
+
+
+
                 )}
             </div>
         </div>

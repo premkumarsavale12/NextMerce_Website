@@ -18,11 +18,12 @@ export default function Shop() {
         Price: [0, 10000],
     });
 
-    // Fetch API Data
+
     useEffect(() => {
         const getData = async () => {
             const response = await fetch("http://localhost:3001/products");
             const data = await response.json();
+            console.log(data);
             setProducts(data);
             setFilteredProducts(data);
         };
@@ -76,7 +77,7 @@ export default function Shop() {
         setCurrentPage(1);
     }, [filters, products]);
 
-    // Pagination logic
+
     const indexOfLast = currentPage * productsPerPage;
     const indexOfFirst = indexOfLast - productsPerPage;
     const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
@@ -96,7 +97,8 @@ export default function Shop() {
 
     return (
         <div className="shop-page">
-            {/* Sidebar */}
+
+
             {!selectedProduct && (
                 <div className="filter-sidebar">
                     <div className="filter-header">
@@ -104,7 +106,7 @@ export default function Shop() {
                         <button onClick={handleClearAll}>Clear All</button>
                     </div>
 
-                    {/* Category Filter */}
+
                     <div className="filter-section">
                         <h4>Category</h4>
                         {[
@@ -192,12 +194,21 @@ export default function Shop() {
                                         />
                                         <h4 className="product-name">{item.name}</h4>
                                         <p className="product-price">${item.price}</p>
+
+
                                     </div>
+
+
                                 ))
+
                             ) : (
                                 <p className="no-products">No products found.</p>
+
                             )}
+
                         </div>
+
+
 
                         {/* Pagination */}
                         <div className="pagination">

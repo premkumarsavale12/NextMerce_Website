@@ -55,6 +55,7 @@
 /* Main Product Area */
 .shop-container {
     flex: 1;
+    padding: 100px;
 }
 
 .shop-title {
