@@ -13,7 +13,7 @@
     flex: 2;
     border-radius: 16px;
     overflow: hidden;
-     margin-left: 50px;
+     margin-left: 90px;
 
 }
 
@@ -83,6 +83,7 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+    margin-right: 80px;
 
 }
 

@@ -16,16 +16,16 @@ export default function NavbarMenu() {
             Pages <RiArrowDropDownLine className="dropdownIcon" />
           </a>
           <div className="dropdownMenu">
-            <Link href="/component/shop-sidebar">Shop With Sidebar</Link>
-            <Link href="/component/shop-nosidebar">Shop Without Sidebar</Link>
+            <Link href="/component/shop">Shop With Sidebar</Link>
+            <Link href="/component/popular">Shop Without Sidebar</Link>
             <Link href="/component/checkout">Checkout</Link>
             <Link href="/component/cart">Cart</Link>
             <Link href="/component/wishlist">Wishlist</Link>
-            <Link href="/component/signin">Sign In</Link>
+            <Link href="/component/signIn">Sign In</Link>
             <Link href="/component/signup">Sign Up</Link>
             <Link href="/component/contact">Contact</Link>
-            <Link href="/component/error">Error</Link>
-            <Link href="/component/mail-success">Mail Success</Link>
+            <Link href="/not-found">Error</Link>
+            <Link href="/component/mail_successfull">Mail Success</Link>
           </div>
         </div>
 

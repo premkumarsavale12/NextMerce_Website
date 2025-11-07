@@ -8,7 +8,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
- import LoginModel from "../LoginModal/LoginModel"
+import LoginModel from "../LoginModal/LoginModel"
 
 import "../LoginModal/LoginModel.css"
 

@@ -3,81 +3,106 @@
         {
             "id": 1,
             "name": "grinder",
-            "price": 2999,
-            "image": "/Images/grinder.webp"
+            "price": 3000,
+            "image": "/Images/grinder.webp",
+            "Category": "Home Appliances",
+            "color": "Black"
         },
         {
             "id": 2,
             "name": "treadmil",
-            "price": 2999,
-            "image": "/Images/treadmil.webp"
+            "price": 1200,
+            "image": "/Images/treadmil.webp",
+            "Category": "Home Appliances",
+            "color": "Black"
         },
         {
             "id": 3,
             "name": "Smart Tv",
-            "price": 2999,
-            "image": "/Images/tv.webp"
+            "price": 1200,
+            "image": "/Images/tv.webp",
+            "Category": "Televisions",
+            "color": "Black"
         },
         {
             "id": 4,
             "name": "iPhone",
-            "price": 2999,
-            "image": "/Images/iphone.webp"
+            "price": 5000,
+            "image": "/Images/iphone.webp",
+            "Category": "Mobile & Tablets",
+            "color": "Red"
         },
         {
             "id": 5,
             "name": "Apple",
-            "price": 2999,
-            "image": "/Images/apple.webp"
+            "price": 2300,
+            "image": "/Images/apple.webp",
+            "Category": "Mobile & Tablets",
+            "color": "Red"
         },
         {
             "id": 6,
             "name": "Smart Watch",
-            "price": 2999,
-            "image": "/Images/watch.webp"
+            "price": 3100,
+            "image": "/Images/watch.webp",
+            "Category": "Watches",
+            "color": "Blue"
         },
         {
             "id": 7,
             "name": "Mac Book",
-            "price": 2999,
-            "image": "/Images/macbook.webp"
+            "price": 1200,
+            "image": "/Images/macbook.webp",
+            "Category": "Laptop & PC",
+            "color": "Black"
         },
         {
             "id": 8,
             "name": "apple_imac",
-            "price": 2999,
-            "image": "/Images/apple_imac.webp"
+            "price": 450,
+            "image": "/Images/apple_imac.webp",
+            "Category": "Mobile & Tablets",
+            "color": "White"
         },
         {
             "id": 9,
             "name": "apple_pc",
-            "price": 2999,
-            "image": "/Images/apple_pc.webp"
+            "price": 340,
+            "image": "/Images/apple_pc.webp",
+            "Category": "Mobile & Tablets",
+            "color": "White"
         },
         {
             "id": 10,
             "name": "apple web",
-            "price": 2999,
-            "image": "/Images/apple.webp"
+            "price": 2300,
+            "image": "/Images/apple.webp",
+            "Category": "Mobile & Tablets",
+            "color": "Red"
         },
         {
             "id": 11,
             "name": "iphone 16 pro",
-            "price": 2999,
-            "image": "/Images/iphone_16_pro.webp"
+            "price": 1290,
+            "image": "/Images/iphone_16_pro.webp",
+            "Category": "Mobile & Tablets",
+             "color":"Red"
         },
         {
             "id": 12,
             "name": "Mac Book ",
-            "price": 2999,
-            "image": "/Images/mac_book_14.webp"
+            "price": 1200,
+            "image": "/Images/mac_book_14.webp",
+            "Category": "Mobile & Tablets",
+             "color":"White"
         },
         {
             "id": 13,
             "name": "Range Tv ",
-            "price": 2999,
-            "image": "/Images/range_43.webp"
+            "price": 1200,
+            "image": "/Images/range_43.webp",
+            "Category": "Televisions",
+             "color":"White"
         }
-         
     ]
 }
