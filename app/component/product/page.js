@@ -1,10 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import "./product.css";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
+   
+
 
   useEffect(() => {
     const getData = async () => {
@@ -12,7 +15,7 @@ export default function Product() {
       let data = await response.json();
 
       // ✅ Filter specific products
-      const idsToShow = [1, 2, 3, 4, 5, 6, 7, 8 ];
+      const idsToShow = [1, 2, 3, 4, 5, 6, 7, 8, 12, 13];
       data = data.filter((item) => idsToShow.includes(item.id));
 
       setProducts(data);
@@ -23,8 +26,13 @@ export default function Product() {
   return (
     <div className="product-section">
       <div className="product-header">
+
         <h2 className="product-title">New Arrivals</h2>
-        <button className="view-all-btn">View All</button>
+        <Link href={"/component/shop"} >
+          <button className="view-all-btn">View All</button>
+
+        </Link>
+
       </div>
 
       <div className="product-container">

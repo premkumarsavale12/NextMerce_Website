@@ -1,9 +1,9 @@
 .shop-page {
     display: flex;
     gap: 25px;
-    background-color: #f5f7fa;
+    /* background-color: #f5f7fa; */
     min-height: 100vh;
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 /* Sidebar Styling */

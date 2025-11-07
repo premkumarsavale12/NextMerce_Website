@@ -1,7 +1,7 @@
 import { BsCart2 } from "react-icons/bs";
- 
+
 import "../checkout/checkout.css";
- import Link from "next/link"
+import Link from "next/link"
 
 export default function Checkout() {
   return (
@@ -16,9 +16,9 @@ export default function Checkout() {
         </h4>
 
 
- <Link  href={"/component/shop"} >  
-         <button className="checkout-btn" >Continue Shopping</button> 
-  </Link>
+        <Link href={"/component/shop"} >
+          <button className="checkout-btn" >Continue Shopping</button>
+        </Link>
 
       </div>
     </div>

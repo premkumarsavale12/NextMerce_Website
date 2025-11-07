@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import "../shop/shop.css";
-
+import ProductDetails from "../productDetails/page"
 export default function Shop() {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+
     const productsPerPage = 6;
 
     const [filters, setFilters] = useState({
@@ -94,114 +97,129 @@ export default function Shop() {
     return (
         <div className="shop-page">
             {/* Sidebar */}
-            <div className="filter-sidebar">
-                <div className="filter-header">
-                    <h3>Filters</h3>
-                    <button onClick={handleClearAll}>Clear All</button>
-                </div>
+            {!selectedProduct && (
+                <div className="filter-sidebar">
+                    <div className="filter-header">
+                        <h3>Filters</h3>
+                        <button onClick={handleClearAll}>Clear All</button>
+                    </div>
 
-                {/* Category Filter */}
-                <div className="filter-section">
-                    <h4>Category</h4>
-                    {[
-                        "Laptop & PC",
-                        "Watches",
-                        "Mobile & Tablets",
-                        "Health & Sports",
-                        "Home Appliances",
-                        "Games & Videos",
-                        "Televisions",
-                    ].map((cat) => (
-                        <label key={cat}>
-                            <input
-                                type="checkbox"
-                                checked={filters.Category.includes(cat)}
-                                onChange={() => handleFilterChange("Category", cat)}
-                            />
-                            {cat}
-                        </label>
-                    ))}
-                </div>
+                    {/* Category Filter */}
+                    <div className="filter-section">
+                        <h4>Category</h4>
+                        {[
+                            "Laptop & PC",
+                            "Watches",
+                            "Mobile & Tablets",
+                            "Health & Sports",
+                            "Home Appliances",
+                            "Games & Videos",
+                            "Televisions",
+                        ].map((cat) => (
+                            <label key={cat}>
+                                <input
+                                    type="checkbox"
+                                    checked={filters.Category.includes(cat)}
+                                    onChange={() => handleFilterChange("Category", cat)}
+                                />
+                                {cat}
+                            </label>
+                        ))}
+                    </div>
 
-                {/* Size Filter */}
-                <div className="filter-section">
-                    <h4>Size</h4>
-                    {["XL", "XXL", "SM", "XM"].map((size) => (
-                        <label key={size}>
-                            <input
-                                type="checkbox"
-                                checked={filters.Size.includes(size)}
-                                onChange={() => handleFilterChange("Size", size)}
-                            />
-                            {size}
-                        </label>
-                    ))}
-                </div>
+                    {/* Size Filter */}
+                    <div className="filter-section">
+                        <h4>Size</h4>
+                        {["XL", "XXL", "SM", "XM"].map((size) => (
+                            <label key={size}>
+                                <input
+                                    type="checkbox"
+                                    checked={filters.Size.includes(size)}
+                                    onChange={() => handleFilterChange("Size", size)}
+                                />
+                                {size}
+                            </label>
+                        ))}
+                    </div>
 
-                {/* Color Filter */}
-                <div className="filter-section">
-                    <h4>Color</h4>
-                    {["Black", "White", "Red", "Blue"].map((color) => (
-                        <label key={color}>
-                            <input
-                                type="checkbox"
-                                checked={filters.Color.includes(color)}
-                                onChange={() => handleFilterChange("Color", color)}
-                            />
-                            {color}
-                        </label>
-                    ))}
-                </div>
+                    {/* Color Filter */}
+                    <div className="filter-section">
+                        <h4>Color</h4>
+                        {["Black", "White", "Red", "Blue"].map((color) => (
+                            <label key={color}>
+                                <input
+                                    type="checkbox"
+                                    checked={filters.Color.includes(color)}
+                                    onChange={() => handleFilterChange("Color", color)}
+                                />
+                                {color}
+                            </label>
+                        ))}
+                    </div>
 
-                {/* Price Filter */}
-                <div className="filter-section">
-                    <h4>Price</h4>
-                    <input
-                        type="range"
-                        min="0"
-                        max="10000"
-                        value={filters.Price[1]}
-                        onChange={handlePriceChange}
-                    />
-                    <p>Up to ${filters.Price[1]}</p>
+                    {/* Price Filter */}
+                    <div className="filter-section">
+                        <h4>Price</h4>
+                        <input
+                            type="range"
+                            min="0"
+                            max="10000"
+                            value={filters.Price[1]}
+                            onChange={handlePriceChange}
+                        />
+                        <p>Up to ${filters.Price[1]}</p>
+                    </div>
                 </div>
-            </div>
+            )}
 
-            {/* Product Grid */}
+            {/* Product Grid / Details */}
             <div className="shop-container">
                 <h2 className="shop-title">Explore All Products</h2>
+                {!selectedProduct ? (
+                    <>
+                        <div className="product-grid">
+                            {currentProducts.length > 0 ? (
+                                currentProducts.map((item) => (
+                                    <div
+                                        className="product-card"
+                                        key={item.id}
+                                        onClick={() => setSelectedProduct(item)}
+                                    >
+                                        <img
+                                            src={item.image}
+                                            alt={item.name}
+                                            className="product-image"
+                                        />
+                                        <h4 className="product-name">{item.name}</h4>
+                                        <p className="product-price">${item.price}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="no-products">No products found.</p>
+                            )}
+                        </div>
 
-                <div className="product-grid">
-                    {currentProducts.length > 0 ? (
-                        currentProducts.map((item) => (
-                            <div className="product-card" key={item.id}>
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="product-image"
-                                />
-                                <h4 className="product-name">{item.name}</h4>
-                                <p className="product-price">${item.price}</p>
-                            </div>
-                        ))
-                    ) : (
-                        <p className="no-products">No products found.</p>
-                    )}
-                </div>
-
-                {/* Pagination */}
-                <div className="pagination">
-                    <button onClick={handlePrev} disabled={currentPage === 1}>
-                        ◀ Previous
-                    </button>
-                    <span>
-                        Page {currentPage} of {totalPages || 1}
-                    </span>
-                    <button onClick={handleNext} disabled={currentPage === totalPages}>
-                        Next ▶
-                    </button>
-                </div>
+                        {/* Pagination */}
+                        <div className="pagination">
+                            <button onClick={handlePrev} disabled={currentPage === 1}>
+                                ◀ Previous
+                            </button>
+                            <span>
+                                Page {currentPage} of {totalPages || 1}
+                            </span>
+                            <button onClick={handleNext} disabled={currentPage === totalPages}>
+                                Next ▶
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <ProductDetails
+                        product={selectedProduct}
+                        onBack={() => setSelectedProduct(null)}
+                    />
+                )}
             </div>
         </div>
+
     );
 }

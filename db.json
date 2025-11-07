@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "name": "grinder",
+            "name": "Grinder",
             "price": 3000,
             "image": "/Images/grinder.webp",
             "Category": "Home Appliances",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "name": "treadmil",
+            "name": "Treadmil",
             "price": 1200,
             "image": "/Images/treadmil.webp",
             "Category": "Home Appliances",
@@ -58,7 +58,7 @@
         },
         {
             "id": 8,
-            "name": "apple_imac",
+            "name": "Apple_imac",
             "price": 450,
             "image": "/Images/apple_imac.webp",
             "Category": "Mobile & Tablets",
@@ -66,7 +66,7 @@
         },
         {
             "id": 9,
-            "name": "apple_pc",
+            "name": "Apple_pc",
             "price": 340,
             "image": "/Images/apple_pc.webp",
             "Category": "Mobile & Tablets",
@@ -74,7 +74,7 @@
         },
         {
             "id": 10,
-            "name": "apple web",
+            "name": "Apple web",
             "price": 2300,
             "image": "/Images/apple.webp",
             "Category": "Mobile & Tablets",

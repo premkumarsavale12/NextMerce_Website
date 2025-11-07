@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import "./seller.css"; // ✅ Import CSS file
 
@@ -30,7 +30,11 @@ export default function Seller() {
     <div className="seller-section">
       <div className="seller-header">
         <h2 className="seller-title">Best Sellers</h2>
-        <button className="view-all-btn">View All</button>
+                <Link href={"/component/shop"} >
+          <button className="view-all-btn">View All</button>
+
+        </Link>
+      
       </div>
 
       <div className="seller-container">

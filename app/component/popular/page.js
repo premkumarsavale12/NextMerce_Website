@@ -1,16 +1,14 @@
 "use client"
 import { useEffect, useState } from "react"
-
 import "../popular/popular.css"
+ import ProductDetails from "../productDetails/page"
 
 export default function Popular() {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedProduct, setSelectedProduct] = useState(null); // selected product
     const productsPerPage = 6;
-
-
-
 
     useEffect(() => {
         const getData = async () => {
@@ -21,25 +19,6 @@ export default function Popular() {
         };
         getData();
     }, []);
-
-
-    const handleFilterChange = (type, value) => {
-        setFilters((prev) => {
-            const isChecked = prev[type].includes(value);
-            const updated = isChecked
-                ? prev[type].filter((item) => item !== value)
-                : [...prev[type], value];
-            return { ...prev, [type]: updated };
-        });
-    };
-
-
-    const handlePriceChange = (e) => {
-        const value = Number(e.target.value);
-        setFilters((prev) => ({ ...prev, price: [0, value] }));
-    };
-
-
 
     // Pagination
     const indexOfLast = currentPage * productsPerPage;
@@ -55,39 +34,50 @@ export default function Popular() {
         if (currentPage > 1) setCurrentPage(currentPage - 1);
     };
 
-    const handleClearAll = () => {
-        setFilters({ category: [], size: [], color: [], price: [0, 10000] });
-    };
-
     return (
         <div className="shop-page">
-            {/* Sidebar */}
-
-            {/* Product Grid */}
             <div className="shop-container">
-                <h2 className="shop-title">Our Best Products</h2>
-                <div className="product-grid">
-                    {currentProducts.map((item) => (
-                        <div className="product-card" key={item.id}>
-                            <img src={item.image} alt={item.name} className="product-image" />
-                            <h4 className="product-name">{item.name}</h4>
-                            <p className="product-price">${item.price}</p>
+                {!selectedProduct ? (
+                    <>
+                        <h2 className="shop-title">Our Best Products</h2>
+                        <div className="product-grid">
+                            {currentProducts.map((item) => (
+                                <div
+                                    className="product-card"
+                                    key={item.id}
+                                    onClick={() => setSelectedProduct(item)}
+                                >
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="product-image"
+                                    />
+                                    <h4 className="product-name">{item.name}</h4>
+                                    <p className="product-price">${item.price}</p>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
 
-                {/* Pagination */}
-                <div className="pagination">
-                    <button onClick={handlePrev} disabled={currentPage === 1}>
-                        ◀ Previous
-                    </button>
-                    <span>
-                        Page {currentPage} of {totalPages}
-                    </span>
-                    <button onClick={handleNext} disabled={currentPage === totalPages}>
-                        Next ▶
-                    </button>
-                </div>
+                        {/* Pagination */}
+                        <div className="pagination">
+                            <button onClick={handlePrev} disabled={currentPage === 1}>
+                                ◀ Previous
+                            </button>
+                            <span>
+                                Page {currentPage} of {totalPages}
+                            </span>
+                            <button onClick={handleNext} disabled={currentPage === totalPages}>
+                                Next ▶
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <ProductDetails
+                        product={selectedProduct}
+                        onBack={() => setSelectedProduct(null)}
+                        
+                    />
+                )}
             </div>
         </div>
     );
