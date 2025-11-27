@@ -27,7 +27,7 @@ export default function Home() {
       <Product />
       <Seller />
 
-      {/* <Enhance /> */} 
+
 
       <FeedBack /> 
       <SybscribeBanner />
